@@ -4,6 +4,7 @@ definePageMeta({ middleware: ["guest"] });
 const router = useRouter();
 const route = useRoute();
 const { login } = useAuth();
+const { backendUrl, frontendUrl } = useRuntimeConfig().public;
 
 const data = reactive({
   email: "",
@@ -21,6 +22,7 @@ const {
 } = useSubmit(
   () => {
     status.value = "";
+    console.log(data);
     return login(data);
   },
   {

@@ -5,8 +5,8 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss"],
   runtimeConfig: {
     public: {
-      backendUrl: "http://localhost:8000",
-      frontendUrl: "http://localhost:3000",
+      backendUrl: process.env.NUXT_PUBLIC_BACKEND_URL,
+      frontendUrl: process.env.NUXT_PUBLIC_FRONTEND_URL,
     },
   },
   imports: {
@@ -16,3 +16,4 @@ export default defineNuxtConfig({
     asyncContext: true,
   }
 });
+
