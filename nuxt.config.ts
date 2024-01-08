@@ -2,11 +2,14 @@ import { defineNuxtConfig } from "nuxt/config";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: [
+      //"@nuxtjs/tailwindcss",
+      "nuxt-quasar-ui"
+  ],
   runtimeConfig: {
     public: {
       backendUrl: process.env.NUXT_PUBLIC_BACKEND_URL,
-      frontendUrl: process.env.NUXT_PUBLIC_FRONTEND_URL,
+      frontendUrl: process.env.NUXT_PUBLIC_FRONTEND_URL
     },
   },
   imports: {

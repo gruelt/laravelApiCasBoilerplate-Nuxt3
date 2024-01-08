@@ -3,7 +3,7 @@ definePageMeta({ middleware: ["auth"] });
 </script>
 
 <template>
-  <NuxtLayout name="app-layout">
+  <NuxtLayout name="quasar-layout">
     <Head>
       <Title>Laravel - Dashboard</Title>
     </Head>
